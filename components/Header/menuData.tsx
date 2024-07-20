@@ -19,6 +19,18 @@ const menuData: Menu[] = [
     path: "/contact",
     newTab: false,
   },
+  {
+    id: 4,
+    title: "whatsapp",
+    path: "https://web.whatsapp.com/send/?phone=971566688874",
+    newTab: false,
+  },
+  {
+    id: 4,
+    title: "Call",
+    path: "tel:+971566688874",
+    newTab: false,
+  },
   // {
   //   id: 4,
   //   title: "Pages",
