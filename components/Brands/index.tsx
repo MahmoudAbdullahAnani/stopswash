@@ -4,33 +4,33 @@ import Image from "next/image";
 const brandsData: Brand[] = [
   {
     id: 1,
-    name: "UIdeck",
-    href: "https://uideck.com",
-    image: "/images/brands/uideck.svg",
+    name: "BMW",
+    href: "https://www.bmw.com/en/index.html",
+    image: "/images/brands/bmw-logo-svgrepo-com.svg",
   },
   {
     id: 2,
-    name: "Tailgrids",
-    href: "https://tailgrids.com",
-    image: "/images/brands/tailgrids.svg",
+    name: "Fiat",
+    href: "https://www.fiat.com/",
+    image: "/images/brands/fiat-alt-svgrepo-com.svg",
   },
   {
     id: 3,
-    name: "Lineicons",
-    href: "https://lineicons.com",
-    image: "/images/brands/lineicons.svg",
+    name: "Jeep",
+    href: "https://Jeep.com",
+    image: "/images/brands/jeep-svgrepo-com.svg",
   },
   {
     id: 4,
-    name: "GrayGrids",
-    href: "https://graygrids.com",
-    image: "/images/brands/graygrids.svg",
+    name: "Jaguar",
+    href: "https://jaguar.com",
+    image: "/images/brands/jaguar-svgrepo-com.svg",
   },
   {
     id: 5,
-    name: "TailAdmin",
-    href: "https://tailadmin.com",
-    image: "/images/brands/tailadmin.svg",
+    name: "Kia",
+    href: "https://kia.com",
+    image: "/images/brands/kia-svgrepo-com (1).svg",
   },
 ];
 
@@ -67,8 +67,9 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
         href={href}
         target="_blank"
         rel="nofollow noreferrer"
-        className="relative h-10 w-full opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 dark:opacity-60 dark:hover:opacity-100"
+        className="relative flex h-10 w-full justify-end overflow-hidden rounded-lg opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 dark:opacity-60 dark:hover:opacity-100"
       >
+        <span>{name}</span>
         <Image src={image} alt={name} fill />
       </a>
     </div>
