@@ -7,6 +7,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import "../globals.css";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
+
 const inter = Inter({ subsets: ["latin"] });
 
 import ToasterContext from "../context/ToastContext";
@@ -24,6 +26,14 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="light"
         >
+          <FloatingWhatsApp
+            accountName="Stops Car Wash"
+            phoneNumber={"971566688874"}
+            notification={true}
+            notificationLoop={1}
+            notificationDelay={20}
+            darkMode={true}
+          />
           <Lines />
           <Header />
           <ToasterContext />
