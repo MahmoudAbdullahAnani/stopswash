@@ -1,204 +1,218 @@
-import NewsLatterBox from "./NewsLatterBox";
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import React from "react";
 
 const Contact = () => {
+  /**
+   * Source: https://www.joshwcomeau.com/react/the-perils-of-rehydration/
+   * Reason: To fix rehydration error
+   */
+  const [hasMounted, setHasMounted] = React.useState(false);
+  React.useEffect(() => {
+    setHasMounted(true);
+  }, []);
+  if (!hasMounted) {
+    return null;
+  }
+
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
-      <div className="container">
-        <h1 className="mb-4 text-2xl font-bold text-black dark:text-white">
-          Contact Us
-        </h1>
-        <div className="mx-auto max-w-2xl rounded-lg bg-white p-6 shadow-md dark:bg-black">
-          <div className="space-y-4">
-            <div className="flex items-center">
-              {/* <svg
-                className="dark:text-yellow-500 mr-2 h-6 w-6 text-primary"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 4v16c0 .553.447 1 1 1h16c.553 0 1-.447 1-1V4c0-.553-.447-1-1-1H4c-.553 0-1 .447-1 1zm2 0h16v16H5V4z"
-                />
-              </svg> */}
-              <a
-                href="tel:+971566688874"
-                className="dark:text-yellow-500 text-primary hover:underline"
-              >
-                Call: +971 56 668 8874
-              </a>
-            </div>
-            <div className="flex items-center">
-              {/* <svg
-                className="dark:text-yellow-500 mr-2 h-6 w-6 text-primary"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M2.003 12.335A9.973 9.973 0 0012 21c5.523 0 10-4.477 10-10S17.523 1 12 1 2 5.477 2 11c0 1.357.226 2.679.65 3.87L4 12l.75 1.688A8.973 8.973 0 002 12.335z"
-                />
-              </svg> */}
-              <a
-                href="https://web.whatsapp.com/send/?phone=971566688874"
-                className="dark:text-yellow-500 text-primary hover:underline"
-              >
-                WhatsApp: +971 56 668 8874
-              </a>
-            </div>
-            <div className="flex flex-col space-y-2">
-              <div className="flex items-center">
-                {/* <svg
-                  className="dark:text-yellow-500 mr-2 h-6 w-6 text-primary"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M20 12h-6v6H8v-6H2l10-10 10 10z"
-                  />
-                </svg> */}
-                <a
-                  href="mailto:Info@stopswash.com"
-                  className="dark:text-yellow-500 text-primary hover:underline"
-                >
-                  Email: Info@stopswash.com
-                </a>
-              </div>
-              <div className="flex items-center">
-                {/* <svg
-                  className="dark:text-yellow-500 mr-2 h-6 w-6 text-primary"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M20 12h-6v6H8v-6H2l10-10 10 10z"
-                  />
-                </svg> */}
-                <a
-                  href="mailto:Sales@stopswash.com"
-                  className="dark:text-yellow-500 text-primary hover:underline"
-                >
-                  Email: Sales@stopswash.com
-                </a>
-              </div>
-              <div className="flex items-center">
-                {/* <svg
-                  className="dark:text-yellow-500 mr-2 h-6 w-6 text-primary"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M20 12h-6v6H8v-6H2l10-10 10 10z"
-                  />
-                </svg> */}
-                <a
-                  href="mailto:Account@stopswash.com"
-                  className="dark:text-yellow-500 text-primary hover:underline"
-                >
-                  Email: Account@stopswash.com
-                </a>
-              </div>
-            </div>
+    <>
+      {/* <!-- ===== Contact Start ===== --> */}
+      <section id="support" className="px-4 md:px-8 2xl:px-0 pb-20 lg:pb-25 xl:pb-30">
+        <div className="relative mx-auto max-w-c-1390 px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
+          <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42]"></div>
+          <div className="absolute bottom-[-255px] left-0 -z-1 h-full w-full">
+            <Image
+              src="./images/shape/shape-dotted-light.svg"
+              alt="Dotted"
+              className="dark:hidden"
+              fill
+            />
+            <Image
+              src="./images/shape/shape-dotted-dark.svg"
+              alt="Dotted"
+              className="hidden dark:block"
+              fill
+            />
           </div>
-        </div>
-        {/* <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
-            <div
-              className="wow fadeInUp mb-12 rounded-md bg-primary/[3%] py-11 px-8 dark:bg-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
-              data-wow-delay=".15s
-              "
+
+          <div className="flex flex-col-reverse flex-wrap gap-8 md:flex-row md:flex-nowrap md:justify-between xl:gap-20">
+            <motion.div
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: -20,
+                },
+
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 1, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="animate_top w-full rounded-lg bg-white p-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-black md:w-3/5 lg:w-3/4 xl:p-15"
             >
-              <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                Need Help? Open a Ticket
+              <h2 className="mb-15 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
+                Send a message
               </h2>
-              <p className="mb-12 text-base font-medium text-body-color">
-                Our support team will get back to you ASAP via email.
-              </p>
-              <form>
-                <div className="-mx-4 flex flex-wrap">
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="name"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
+
+              <form
+                action="https://formbold.com/s/unique_form_id"
+                method="POST"
+              >
+                <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
+                  <input
+                    type="text"
+                    placeholder="Full name"
+                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                  />
+
+                  <input
+                    type="email"
+                    placeholder="Email address"
+                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                  />
+                </div>
+
+                <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
+                  <input
+                    type="text"
+                    placeholder="Subject"
+                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                  />
+
+                  <input
+                    type="text"
+                    placeholder="Phone number"
+                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                  />
+                </div>
+
+                <div className="mb-11.5 flex">
+                  <textarea
+                    placeholder="Message"
+                    rows={4}
+                    className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
+                  ></textarea>
+                </div>
+
+                <div className="flex flex-wrap gap-4 xl:justify-between ">
+                  <div className="mb-4 flex md:mb-0">
+                    <input
+                      id="default-checkbox"
+                      type="checkbox"
+                      className="peer sr-only"
+                    />
+                    <span className="group mt-2 flex h-5 min-w-[20px] items-center justify-center rounded border-gray-300 bg-gray-100 text-blue-600 peer-checked:bg-primary dark:border-gray-600 dark:bg-gray-700">
+                      <svg
+                        className="opacity-0 peer-checked:group-[]:opacity-100"
+                        width="10"
+                        height="8"
+                        viewBox="0 0 10 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
-                        Your Name
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Enter your name"
-                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M9.70704 0.792787C9.89451 0.980314 9.99983 1.23462 9.99983 1.49979C9.99983 1.76495 9.89451 2.01926 9.70704 2.20679L4.70704 7.20679C4.51951 7.39426 4.26521 7.49957 4.00004 7.49957C3.73488 7.49957 3.48057 7.39426 3.29304 7.20679L0.293041 4.20679C0.110883 4.01818 0.0100885 3.76558 0.0123669 3.50339C0.0146453 3.24119 0.119814 2.99038 0.305222 2.80497C0.490631 2.61956 0.741443 2.51439 1.00364 2.51211C1.26584 2.50983 1.51844 2.61063 1.70704 2.79279L4.00004 5.08579L8.29304 0.792787C8.48057 0.605316 8.73488 0.5 9.00004 0.5C9.26521 0.5 9.51951 0.605316 9.70704 0.792787Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </span>
+                    <label
+                      htmlFor="default-checkbox"
+                      className="flex max-w-[425px] cursor-pointer select-none pl-5"
+                    >
+                      By clicking Checkbox, you agree to use our “Form” terms
+                      And consent cookie usage in browser.
+                    </label>
+                  </div>
+
+                  <a
+                    href="https://web.whatsapp.com/send/?phone=971566688874"
+                    aria-label="send message"
+                    className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark"
+                  >
+                    Send Message
+                    <svg
+                      className="fill-white"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z"
+                        fill=""
                       />
-                    </div>
-                  </div>
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="email"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Your Email
-                      </label>
-                      <input
-                        type="email"
-                        placeholder="Enter your email"
-                        className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full px-4">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="message"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Your Message
-                      </label>
-                      <textarea
-                        name="message"
-                        rows={5}
-                        placeholder="Enter your Message"
-                        className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div className="w-full px-4">
-                    <button className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-                      Submit Ticket
-                    </button>
-                  </div>
+                    </svg>
+                  </a>
                 </div>
               </form>
-            </div>
+            </motion.div>
+
+            <motion.div
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: -20,
+                },
+
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 2, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="animate_top w-full md:w-2/5 md:p-7.5 lg:w-[26%] xl:pt-15"
+            >
+              <h2 className="mb-12.5 text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
+                Find us
+              </h2>
+
+              <div className="5 mb-7">
+                <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
+                  Email Address
+                </h3>
+                <p>
+                  <a href="mailto:Account@stopswash.com">
+                    Account@stopswash.com
+                  </a>
+                </p>
+              </div>
+              <div>
+                <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
+                  Phone Number
+                </h4>
+                <p>
+                  <a href="tel:+971566688874">+971 56668 8874</a>
+                </p>
+              </div>
+              <div>
+                <h4 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
+                  whatsapp
+                </h4>
+                <p>
+                  <a href="https://web.whatsapp.com/send/?phone=971566688874">
+                    +971 56668 8874
+                  </a>
+                </p>
+              </div>
+            </motion.div>
           </div>
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <NewsLatterBox />
-          </div>
-        </div> */}
-      </div>
-    </section>
+        </div>
+      </section>
+      {/* <!-- ===== Contact End ===== --> */}
+    </>
   );
 };
 

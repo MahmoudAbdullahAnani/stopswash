@@ -1,47 +1,48 @@
 import { Blog } from "@/types/blog";
 
-const blogData: Blog[] = [
+const BlogData: Blog[] = [
   {
-    id: 1,
-    title: "Best UI components for modern websites",
-    paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-01.jpg",
-    author: {
-      name: "Samuyl Joshi",
-      image: "/images/blog/author-01.png",
-      designation: "Graphic Designer",
-    },
-    tags: ["creative"],
-    publishDate: "2025",
+    _id: 1,
+    mainImage: "/images/blog/blog-01.png",
+    title: "Free advertising for your online business",
+    metadata:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
   },
   {
-    id: 2,
+    _id: 2,
+    mainImage: "/images/blog/blog-02.png",
     title: "9 simple ways to improve your design skills",
-    paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-02.jpg",
-    author: {
-      name: "Musharof Chy",
-      image: "/images/blog/author-02.png",
-      designation: "Content Writer",
-    },
-    tags: ["computer"],
-    publishDate: "2025",
+    metadata:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
   },
   {
-    id: 3,
+    _id: 2,
+    mainImage: "/images/blog/blog-03.png",
     title: "Tips to quickly improve your coding speed.",
-    paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
-    image: "/images/blog/blog-03.jpg",
-    author: {
-      name: "Lethium Deo",
-      image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
-    },
-    tags: ["design"],
-    publishDate: "2025",
+    metadata:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+  },
+  {
+    _id: 1,
+    mainImage: "/images/blog/blog-03.png",
+    title: "Free advertising for your online business",
+    metadata:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+  },
+  {
+    _id: 2,
+    mainImage: "/images/blog/blog-04.png",
+    title: "9 simple ways to improve your design skills",
+    metadata:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
+  },
+  {
+    _id: 2,
+    mainImage: "/images/blog/blog-01.png",
+    title: "Tips to quickly improve your coding speed.",
+    metadata:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
   },
 ];
-export default blogData;
+
+export default BlogData;

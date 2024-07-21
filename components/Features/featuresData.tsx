@@ -13,7 +13,7 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "Premium Car Wash Services",
-    paragraph:
+    description:
       "We offer a variety of car wash packages tailored to meet the needs of our diverse clientele. Whether you need a quick exterior wash or a detailed interior cleaning, we have the right solution for you.",
   },
   {
@@ -28,7 +28,7 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "Crafted for Convenience",
-    paragraph:
+    description:
       "Our services are designed to provide maximum convenience. With flexible scheduling and multiple locations, you can get your car washed at a time and place that works best for you.",
   },
   {
@@ -43,7 +43,7 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "High-quality Cleaning Products",
-    paragraph:
+    description:
       "We use only the best cleaning products and equipment to ensure your car looks its best. Our high-quality materials and eco-friendly solutions guarantee a spotless and shiny finish.",
   },
   {
@@ -58,7 +58,7 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "Latest Technology",
-    paragraph:
+    description:
       "We stay up-to-date with the latest advancements in car wash technology. Our state-of-the-art equipment ensures efficient and effective cleaning, giving your car the best possible care.",
   },
   {
@@ -73,7 +73,7 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "Tailored Services",
-    paragraph:
+    description:
       "Our car wash services are fully customizable to meet your specific needs. From basic washes to deluxe detailing, you can choose the services that best suit your car's requirements.",
   },
   {
@@ -88,7 +88,7 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "Affordable Pricing",
-    paragraph:
+    description:
       "We believe in providing top-notch services at competitive prices. Our affordable pricing options ensure that you get the best value for your money without compromising on quality.",
   },
 
@@ -104,7 +104,7 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "Eco-friendly Practices",
-    paragraph:
+    description:
       "We are committed to sustainability. Our eco-friendly practices and products help reduce our environmental footprint while still delivering excellent results.",
   },
   {
@@ -119,7 +119,7 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "Free and Open to All",
-    paragraph:
+    description:
       "Our services are accessible to everyone. We welcome all car owners to experience our premium car wash services and enjoy the difference we make.",
   },
 ];

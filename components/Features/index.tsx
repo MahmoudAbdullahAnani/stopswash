@@ -1,34 +1,40 @@
 "use client";
-import { useState } from "react";
-import SectionTitle from "../Common/SectionTitle";
-import SingleFeature from "./SingleFeature";
+import React, { useState } from "react";
 import featuresData from "./featuresData";
+import SingleFeature from "./SingleFeature";
+import SectionHeader from "../Common/SectionHeader";
 
-const Features = () => {
+const Feature = () => {
   const [more, setMore] = useState(false);
+
   return (
     <>
-      <section
-        id="features"
-        className="bg-primary/[.03] py-16 md:py-20 lg:py-28"
-      >
-        <div className="container">
-          <SectionTitle
-            title="Main Features"
-            paragraph="Experience premium, customizable, and eco-friendly car wash services designed for your convenience at Stops Car Wash."
-            center
+      {/* <!-- ===== Features Start ===== --> */}
+      <section id="features" className="py-20 lg:py-25 xl:py-30">
+        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+          {/* <!-- Section Title Start --> */}
+          <SectionHeader
+            headerInfo={{
+              title: "SOLID FEATURES",
+              subtitle: "Core Features of Solid",
+              description: `Experience premium, customizable, and eco-friendly car wash services designed for your convenience at Stops Car Wash.`,
+            }}
           />
+          {/* <!-- Section Title End --> */}
 
-          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
+            {/* <!-- Features item Start --> */}
+
             {featuresData
               .slice(0, more ? featuresData.length : 6)
-              .map((feature) => (
-                <SingleFeature key={feature.id} feature={feature} />
+              .map((feature, key) => (
+                <SingleFeature feature={feature} key={key} />
               ))}
+            {/* <!-- Features item End --> */}
           </div>
           <div className="text-center">
             <button
-              className="mx-auto my-5 rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+              className="mx-auto my-5 rounded-md bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
               onClick={() => setMore(!more)}
             >
               {more ? "Show Less" : "Show More"}
@@ -36,8 +42,10 @@ const Features = () => {
           </div>
         </div>
       </section>
+
+      {/* <!-- ===== Features End ===== --> */}
     </>
   );
 };
 
-export default Features;
+export default Feature;

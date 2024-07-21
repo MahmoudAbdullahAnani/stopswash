@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import SectionTitle from "../Common/SectionTitle";
+import SectionTitle from "../Common/SectionHeader";
 
 import ModalVideo from "react-modal-video";
 
@@ -10,13 +10,14 @@ const Video = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <section className="relative z-10 py-16 md:py-20 lg:py-28">
-      <div className="container">
+    <section id="features" className="py-20 lg:py-25 xl:py-30">
+      <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
         <SectionTitle
-          title="We are ready to help"
-          paragraph="Experience premium, customizable, and eco-friendly car wash services designed for your convenience at Stops Car Wash. We are ready to help."
-          center
-          mb="80px"
+          headerInfo={{
+            title: `We are ready to help`,
+            subtitle: ``,
+            description: `Experience premium, customizable, and eco-friendly car wash services designed for your convenience at Stops Car Wash. We are ready to help.`,
+          }}
         />
 
         <div className="-mx-4 flex flex-wrap">
@@ -27,7 +28,7 @@ const Video = () => {
             >
               <div className="relative aspect-[77/40] items-center justify-center">
                 <Image src="/images/2.jpeg" alt="video image" fill />
-                <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
+                <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center">
                   <button
                     onClick={() => setOpen(true)}
                     className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"

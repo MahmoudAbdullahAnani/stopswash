@@ -1,36 +1,40 @@
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import BlogData from "./blogData";
 
-const RelatedPost = ({
-  image,
-  slug,
-  title,
-  date,
-}: {
-  image: string;
-  slug: string;
-  title: string;
-  date: string;
-}) => {
+const RelatedPost = async () => {
   return (
-    <div className="flex items-center lg:block xl:flex">
-      <div className="mr-5 lg:mb-3 xl:mb-0">
-        <div className="relative h-[60px] w-[70px] overflow-hidden rounded-md sm:h-[75px] sm:w-[85px]">
-          <Image src={image} alt={title} fill />
+    <>
+      <div className="animate_top rounded-md border border-stroke bg-white p-9 shadow-solid-13 dark:border-strokedark dark:bg-blacksection">
+        <h4 className="mb-7.5 text-2xl font-semibold text-black dark:text-white">
+          Related Posts
+        </h4>
+
+        <div>
+          {BlogData.slice(0, 3).map((post, key) => (
+            <div
+              className="mb-7.5 flex flex-wrap gap-4 xl:flex-nowrap 2xl:gap-6"
+              key={key}
+            >
+              <div className="max-w-45 relative h-18 w-45">
+                {post.mainImage ? (
+                  <Image fill src={post.mainImage} alt="Blog" />
+                ) : (
+                  "No image"
+                )}
+              </div>
+              <h5 className="text-md font-medium text-black transition-all duration-300 hover:text-primary dark:text-white dark:hover:text-primary">
+                <Link href={`/blog/blog-details`}>
+                  {" "}
+                  {post.title.slice(0, 40)}...
+                </Link>
+              </h5>
+            </div>
+          ))}
         </div>
       </div>
-      <div className="w-full">
-        <h5>
-          <Link
-            href={slug}
-            className="mb-[6px] block text-base font-medium leading-snug text-black hover:text-primary dark:text-white dark:hover:text-primary"
-          >
-            {title}
-          </Link>
-        </h5>
-        <p className="text-xs font-medium text-body-color">{date}</p>
-      </div>
-    </div>
+    </>
   );
 };
 
