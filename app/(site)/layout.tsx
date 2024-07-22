@@ -8,6 +8,7 @@ import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
+import "node_modules/react-modal-video/css/modal-video.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
