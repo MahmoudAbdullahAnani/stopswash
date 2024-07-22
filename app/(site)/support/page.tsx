@@ -3,8 +3,10 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Support Page - Solid SaaS Boilerplate",
-  description: "This is Support page for Solid Pro",
+  title: "Stops Car Wash - Premium Car Wash Services",
+  description:
+    "Experience top-quality, eco-friendly car wash services tailored for your vehicle's needs at Stops Car Wash. Your satisfaction is our priority.",
+  icons: "/favicon.png",
   // other metadata
 };
 
