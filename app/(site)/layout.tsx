@@ -1,5 +1,4 @@
 "use client";
-
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Lines from "@/components/Lines";
@@ -9,7 +8,7 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import "node_modules/react-modal-video/css/modal-video.css";
-
+import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 import ToasterContext from "../context/ToastContext";
@@ -29,7 +28,6 @@ export default function RootLayout({
       // Initialize Google Analytics
       // @ts-ignore
       window.dataLayer = window.dataLayer || [];
-
       // @ts-ignore
       function gtag() {
         // @ts-ignore
@@ -94,6 +92,7 @@ export default function RootLayout({
           });
         `}
           </Script>
+          <Analytics />
           {children}
           <Footer />
           <ScrollToTop />
